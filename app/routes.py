@@ -1,12 +1,10 @@
 from app import app
 import flask
 import socket
-import argparse
 from dotenv import load_dotenv
 import os
-import requests
-from app.mqtt import publish
 import json
+from app.mqtt import publish
 
 load_dotenv()
 PROCESS_ID = int(os.environ['MY_PID'])
