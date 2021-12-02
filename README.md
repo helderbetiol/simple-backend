@@ -35,7 +35,7 @@ sudo pip install -r requirements.txt
 ### Execute a aplicação
 * Utilise flask:
 ```terminal
-sudo flask run --host=0.0.0.0 --port=80 &
+sudo flask run --host=0.0.0.0 --port=80
 ```
 
 A aplicação responderá requisições HTTP GET direcionadas à porta 80 deste servidor no caminho raíz "/" com uma mensagem contendo o IP do servidor onde está executando.
