@@ -32,6 +32,12 @@ cd simple-backend/
 sudo pip install -r requirements.txt
 ```
 
+### Configure um PID único
+* Um arquivo .env com a variável de ambiente MY_PID foi adicionado ao diretório local com um valor padrão 1. Para que a comunicação funcione corretamente, cada aplicação em execução deve ter um valor diferente para esta variável. Altere para outro valor númerico em cada máquina virtual onde a aplicação foi instalada antes de executá-la:
+```terminal
+vi .env
+```
+
 ### Execute a aplicação
 * Utilise flask:
 ```terminal
