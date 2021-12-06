@@ -82,8 +82,10 @@ def lamport_critical_access():
     if not data['destination_id']:
         return "Invalid data", 400
 
+    # update clock
+    PROCESS_CLOCK += 1 
+
     if ACCESS_STATE == 0: # no access, request permission to all to access 
-        PROCESS_CLOCK += 1 # update clock
         send_data = {'sender_id': PROCESS_ID, 'resource': 'critical', 'clock': PROCESS_CLOCK , 'status': 'request'}
         publish(json.dumps(send_data))
         msg = f"Critial access REQUESTED. Local clock is now {PROCESS_CLOCK}"
