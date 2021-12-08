@@ -66,7 +66,7 @@ def lamport_receive_event(string_data):
         PROCESS_CLOCK += 1
         msg = f"Message ACCEPTED from {data['sender_id']} with EVENT {data['sender_id']}.{data['clock']}. Local clock is now {PROCESS_CLOCK}"
     else:
-        msg = f"Message IGNORED from {data['sender_id']} to {data['destination_id']}. Local clock is still {PROCESS_CLOCK}"
+        msg = f"Message IGNORED from {data['sender_id']} to {data['destination_id']} with EVENT {data['sender_id']}.{data['clock']}. Local clock is still {PROCESS_CLOCK}"
     msg = f"[EVENT {PROCESS_ID}.{PROCESS_CLOCK}] " + msg
     print(msg)
     return msg
