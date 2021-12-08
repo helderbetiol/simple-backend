@@ -105,7 +105,7 @@ def lamport_critical_access():
 def manage_critical_response(data):
     global ACCESS_STATE, ACCESS_QUEUE, ACCESS_GRANT_COUNT
     if data['status'] == 'OK': # received a response
-        if data['destination_id'] == PROCESS_ID: # and it is for me
+        if data['destination_id'] == PROCESS_ID and ACCESS_STATE == 2: # it is for me and I was waiting for it
             print(f"Got OK to access from {data['sender_id']}")
             ACCESS_GRANT_COUNT +=1
             if ACCESS_GRANT_COUNT == MAX_PID: # got the access
