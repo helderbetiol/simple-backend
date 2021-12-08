@@ -95,6 +95,7 @@ def lamport_critical_access():
     else: # wants or has access, switch to no access 
         unqueue_access()
         ACCESS_STATE = 0
+        ACCESS_GRANT_COUNT = 0
         msg = f"Switched critical state to NO ACCESS. Local clock is now {PROCESS_CLOCK}"
     msg = f"[EVENT {PROCESS_ID}.{PROCESS_CLOCK}] " + msg
     print(msg)
