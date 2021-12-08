@@ -40,7 +40,7 @@ def lamport_send_event():
         msg = f"Local event. Local clock is now {PROCESS_CLOCK}"
     else:
         # send data
-        send_data = {'sender_id': PROCESS_ID, 'destination_id': data['destination_id'], 'clock': PROCESS_CLOCK}
+        send_data = {'sender_id': PROCESS_ID, 'destination_id': data['destination_id'], 'clock': PROCESS_CLOCK, 'resource': 'regular'}
         publish(json.dumps(send_data))
         msg = f"Message SENT. Local clock is now {PROCESS_CLOCK}"
     msg = f"[EVENT {PROCESS_ID}.{PROCESS_CLOCK}] " + msg
@@ -56,7 +56,7 @@ def lamport_receive_event(string_data):
     global PROCESS_CLOCK
     data = json.loads(string_data)
 
-    if data['resource'] and data['resource'] == 'critical':
+    if data['resource'] == 'critical':
         manage_critical_response(data)
         msg = f"Critical message received"
     elif data['destination_id'] == PROCESS_ID:
