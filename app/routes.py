@@ -78,7 +78,7 @@ def lamport_receive_event(string_data):
 # trigger or cancel access with POST
 @app.route('/lamport/critical', methods=['POST'])
 def lamport_critical_access():
-    global PROCESS_CLOCK, ACCESS_STATE
+    global PROCESS_CLOCK, ACCESS_STATE, ACCESS_GRANT_COUNT
     # get expected json body
     data = flask.request.get_json()
     if not data['destination_id']:
