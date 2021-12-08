@@ -4,6 +4,7 @@ import socket
 from dotenv import load_dotenv
 import os
 import json
+from app.bully import LEADER
 from app.mqtt import publish
 
 load_dotenv()
@@ -49,7 +50,7 @@ def lamport_send_event():
 
 @app.route('/lamport/status', methods=['GET'])
 def lamport_get_status():
-    return flask.jsonify({'PID': PROCESS_ID, 'CLOCK': PROCESS_CLOCK, 'ACCESS_STATE': ACCESS_STATE}), 200
+    return flask.jsonify({'PID': PROCESS_ID, 'CLOCK': PROCESS_CLOCK, 'ACCESS_STATE': ACCESS_STATE, 'LEADER': LEADER}), 200
 
 # Receive event, callback from mqtt subscribe
 def lamport_receive_event(string_data):
