@@ -55,10 +55,10 @@ def lamport_get_status():
 def lamport_receive_event(string_data):
     global PROCESS_CLOCK
     data = json.loads(string_data)
+    msg = ''
 
     if data['resource'] == 'critical':
         manage_critical_response(data)
-        msg = f"Critical message received"
     elif data['destination_id'] == PROCESS_ID:
         # update clock
         if data['clock'] > PROCESS_CLOCK:
@@ -67,8 +67,10 @@ def lamport_receive_event(string_data):
         msg = f"Message ACCEPTED from {data['sender_id']} with EVENT {data['sender_id']}.{data['clock']}. Local clock is now {PROCESS_CLOCK}"
     else:
         msg = f"Message IGNORED from {data['sender_id']} to {data['destination_id']} with EVENT {data['sender_id']}.{data['clock']}. Local clock is still {PROCESS_CLOCK}"
-    msg = f"[EVENT {PROCESS_ID}.{PROCESS_CLOCK}] " + msg
-    print(msg)
+    
+    if msg:
+        msg = f"[EVENT {PROCESS_ID}.{PROCESS_CLOCK}] " + msg
+        print(msg)
     return msg
 
 # Mutual Exclusion
