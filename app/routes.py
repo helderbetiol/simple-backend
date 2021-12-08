@@ -56,7 +56,7 @@ def lamport_receive_event(string_data):
     global PROCESS_CLOCK
     data = json.loads(string_data)
 
-    if data['resource'] == 'critical':
+    if data['resource'] and data['resource'] == 'critical':
         manage_critical_response(data)
         msg = f"Critical message received"
     elif data['destination_id'] == PROCESS_ID:
