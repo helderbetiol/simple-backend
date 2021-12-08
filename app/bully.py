@@ -60,18 +60,21 @@ def election_timeout():
         ELECTION_IN_PROGRESS = False
         leader_timer.start()
 
-def leader_heartbeat():
+def leader_heartbeat(): # called when I am the leader
     print(f"Leader {LEADER} heartbeat sent")
     send_data = {'sender_id': PROCESS_ID, 'message': 'heartbeat'}
     mqtt.publish(json.dumps(send_data), mqtt.bully_topic)
     leader_timer.start()
 
-def check_leader():
+def check_leader(): # called when I am not the leader
     global LEADER_HEARTBEAT_COUNT
-    if LEADER_HEARTBEAT_COUNT == 0:
-        print(f"Leader {LEADER} not responding, start election")
-        check_leader_timer.cancel()
-        start_election()
+    if LEADER_HEARTBEAT_COUNT == 0 
+        if LEADER != PROCESS_ID:
+            print(f"Leader {LEADER} not responding, start election")
+            check_leader_timer.cancel()
+            start_election()
+        else
+            LEADER_HEARTBEAT_COUNT = 0
     else: 
         LEADER_HEARTBEAT_COUNT = 0
         check_leader_timer.start()
