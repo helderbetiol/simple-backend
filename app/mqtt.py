@@ -7,6 +7,8 @@ import os
 import app.routes as routes
 import app.bully as bully
 
+# Code adapted from: https://www.emqx.com/en/blog/how-to-use-mqtt-in-python
+
 broker = 'broker.emqx.io'
 port = 1883
 topic = "distribuidos/#"

@@ -15,7 +15,7 @@ print(f"-> Process {PROCESS_ID} started with clock {PROCESS_CLOCK}")
 
 # mutual exclusion
 ACCESS_STATE = 0 # 0 = no access, 1 = has access, 2 = wants access
-ACCESS_QUEUE = []
+ACCESS_QUEUE = [] # queue of process that requested access while we have it
 ACCESS_GRANT_COUNT = 0 # must be MAX_PID to get access
 
 @app.route('/')
@@ -64,12 +64,12 @@ def lamport_receive_event(string_data):
         # update clock
         if data['clock'] > PROCESS_CLOCK:
             PROCESS_CLOCK = data['clock']
-            PROCESS_CLOCK += 1
-            msg = f"Message ACCEPTED from {data['sender_id']} with EVENT {data['sender_id']}.{data['clock']}. Local clock is now {PROCESS_CLOCK}"
-        else:
-            msg = f"Message IGNORED from {data['sender_id']} to {data['destination_id']}. Local clock is still {PROCESS_CLOCK}"
-        msg = f"[EVENT {PROCESS_ID}.{PROCESS_CLOCK}] " + msg
-        print(msg)
+        PROCESS_CLOCK += 1
+        msg = f"Message ACCEPTED from {data['sender_id']} with EVENT {data['sender_id']}.{data['clock']}. Local clock is now {PROCESS_CLOCK}"
+    else:
+        msg = f"Message IGNORED from {data['sender_id']} to {data['destination_id']}. Local clock is still {PROCESS_CLOCK}"
+    msg = f"[EVENT {PROCESS_ID}.{PROCESS_CLOCK}] " + msg
+    print(msg)
     return msg
 
 # Mutual Exclusion
