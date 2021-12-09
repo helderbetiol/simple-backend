@@ -73,7 +73,7 @@ def check_leader(): # called when I am not the leader
             print(f"Leader {LEADER} not responding, start election")
             check_leader_timer.cancel()
             start_election()
-        else
+        else:
             LEADER_HEARTBEAT_COUNT = 0
     else: 
         LEADER_HEARTBEAT_COUNT = 0
