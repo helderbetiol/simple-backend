@@ -68,7 +68,7 @@ def leader_heartbeat(): # called when I am the leader
 
 def check_leader(): # called when I am not the leader
     global LEADER_HEARTBEAT_COUNT
-    if LEADER_HEARTBEAT_COUNT == 0 
+    if LEADER_HEARTBEAT_COUNT == 0:
         if LEADER != PROCESS_ID:
             print(f"Leader {LEADER} not responding, start election")
             check_leader_timer.cancel()
