@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "469573d9-646a-4f14-86d0-ad6617605317",
+		"name": "P2 Distribuidos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.90.107.227:80/lamport/send",
+					"protocol": "http",
+					"host": [
+						"52",
+						"90",
+						"107",
+						"227"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.89.175.249:80/lamport/send",
+					"protocol": "http",
+					"host": [
+						"54",
+						"89",
+						"175",
+						"249"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.212.1.138:80/lamport/send",
+					"protocol": "http",
+					"host": [
+						"18",
+						"212",
+						"1",
+						"138"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:81/lamport/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/lamport/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"lamport",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:82/lamport/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:82/lamport/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "82",
+					"path": [
+						"lamport",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:83/lamport/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:83/lamport/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "83",
+					"path": [
+						"lamport",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/critical",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.90.107.227:80/lamport/critical",
+					"protocol": "http",
+					"host": [
+						"52",
+						"90",
+						"107",
+						"227"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"critical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/critical Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.89.175.249:80/lamport/critical",
+					"protocol": "http",
+					"host": [
+						"54",
+						"89",
+						"175",
+						"249"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"critical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/critical Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.212.1.138:80/lamport/critical",
+					"protocol": "http",
+					"host": [
+						"18",
+						"212",
+						"1",
+						"138"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"critical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:81/lamport/critical",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/lamport/critical",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"lamport",
+						"critical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:82/lamport/critical",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:82/lamport/critical",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "82",
+					"path": [
+						"lamport",
+						"critical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:83/lamport/critical",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:83/lamport/critical",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "83",
+					"path": [
+						"lamport",
+						"critical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:81/lamport/status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/lamport/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"lamport",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/status Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.90.107.227:80/lamport/status",
+					"protocol": "http",
+					"host": [
+						"52",
+						"90",
+						"107",
+						"227"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/status Copy 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.89.175.249:80/lamport/status",
+					"protocol": "http",
+					"host": [
+						"54",
+						"89",
+						"175",
+						"249"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://[IP-AMAZON]:80/lamport/status Copy 3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination_id\": \"all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.212.1.138:80/lamport/status",
+					"protocol": "http",
+					"host": [
+						"18",
+						"212",
+						"1",
+						"138"
+					],
+					"port": "80",
+					"path": [
+						"lamport",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
