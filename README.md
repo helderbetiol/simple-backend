@@ -5,6 +5,8 @@ A aplicação flask para responder requisições HTTP com o IP do servidor imple
 - *mutual_exclusion*: algoritmo de Lamport para exclusão mútua, aprimorado por Ricart e Agrawala; 
 - *bully*: algoritmo do valentão (bully) de eleição
 
+Vale notar que, apesar de dividido em branches para testes na cloud, o branch seguinte inclui também o código do branch precedente, ou seja, *mutual_exclusion* inclui o código do relógio de Lamport e *bully* inclui ambos. Logo, para avaliar o código de todos os algoritmos, pode-se usar apenas o branch *bully*.
+
 Seguem instruções de como instalar e executar a aplicação em uma máquina virtual AWS:
 
 ## Preparar a VM
