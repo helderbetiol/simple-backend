@@ -93,10 +93,9 @@ class RepeatableTimer(object):
     def cancel(self):
         self.t.cancel()
 
-leader_timer = RepeatableTimer(10, leader_heartbeat)
-# leader_timer = Timer(20, leader_heartbeat) # 30s timeout
-check_leader_timer = RepeatableTimer(20, check_leader) # 30s timeout
-election_timer = RepeatableTimer(10, election_timeout) # 10s timeout
+leader_timer = RepeatableTimer(10, leader_heartbeat) # 10s timeout, only when is leader
+check_leader_timer = RepeatableTimer(20, check_leader) # 20s timeout, only when not leader
+election_timer = RepeatableTimer(10, election_timeout) # 10s timeout, only after election message
 start_election()
 
 
